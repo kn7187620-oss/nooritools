@@ -1,31 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NooriTools - Free Online Tools for Everyday Life</title>
+<title>NooriTools | Smart Daily Tools</title>
 
-<meta name="description" content="NooriTools provides free online tools including calculator, currency converter, age calculator, date calculator, countdown timer, unit converter, QR generator, password generator, word counter and more.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2300eaff'/%3E%3Ctext x='50' y='68' font-size='62' text-anchor='middle' font-family='Arial' font-weight='900' fill='%2307111f'%3EN%3C/text%3E%3C/svg%3E">
 
-<meta name="keywords" content="NooriTools, free online tools, online calculator, currency converter, AFN PKR converter, age calculator, date calculator, countdown timer, unit converter, QR code generator, password generator, word counter, color picker, tip calculator, quick notes">
-
+<meta name="description" content="NooriTools - 15 powerful and useful online tools for everyday life.">
+<meta name="keywords" content="NooriTools, online tools, calculator, currency converter, age calculator, countdown, weather, percentage calculator, unit converter, word counter, password generator, QR code generator, color picker, BMI calculator, tip calculator, notes">
 <meta name="author" content="NooriTools">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-
-<link rel="canonical" href="https://kn7187620-oss.github.io/nooritools/">
-
-<meta property="og:title" content="NooriTools - Free Online Tools">
-<meta property="og:description" content="Free, fast and useful online tools for everyday tasks.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kn7187620-oss.github.io/nooritools/">
-<meta property="og:site_name" content="NooriTools">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NooriTools - Free Online Tools">
-<meta name="twitter:description" content="Useful free online tools for everyday tasks.">
 
 <style>
 *{
@@ -77,8 +62,6 @@ body::after{
     to{transform:translate(100px,70px);}
 }
 
-/* NAVBAR */
-
 .navbar{
     position:sticky;
     top:0;
@@ -87,7 +70,7 @@ body::after{
     align-items:center;
     justify-content:space-between;
     padding:15px 6%;
-    background:rgba(5,12,25,.88);
+    background:rgba(5,12,25,.86);
     backdrop-filter:blur(18px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -98,7 +81,6 @@ body::after{
     gap:12px;
     font-size:24px;
     font-weight:900;
-    letter-spacing:.5px;
 }
 
 .logo-n{
@@ -162,8 +144,6 @@ body::after{
     cursor:pointer;
 }
 
-/* HERO */
-
 .hero{
     min-height:560px;
     display:flex;
@@ -171,7 +151,6 @@ body::after{
     justify-content:center;
     text-align:center;
     padding:80px 20px 60px;
-    position:relative;
 }
 
 .hero-content{
@@ -247,8 +226,6 @@ body::after{
     box-shadow:0 10px 35px rgba(0,234,255,.18);
 }
 
-/* TOOLS */
-
 .tools-section{
     max-width:1250px;
     margin:auto;
@@ -267,13 +244,11 @@ body::after{
 
 .section-title p{
     color:#94a3b8;
-    line-height:1.6;
 }
 
 .search-box{
     max-width:700px;
     margin:0 auto 45px;
-    position:relative;
 }
 
 .search-box input{
@@ -290,14 +265,6 @@ body::after{
 .search-box input:focus{
     border-color:#00eaff;
     box-shadow:0 0 20px rgba(0,234,255,.12);
-}
-
-.tool-count{
-    text-align:center;
-    color:#7f91a8;
-    margin-top:-25px;
-    margin-bottom:25px;
-    font-size:14px;
 }
 
 .tools-grid{
@@ -350,7 +317,6 @@ body::after{
     color:#91a3b8;
     font-size:14px;
     margin-bottom:18px;
-    line-height:1.5;
 }
 
 input,select,textarea{
@@ -407,7 +373,6 @@ input,select,textarea{
     color:#dffcff;
     min-height:20px;
     word-break:break-word;
-    line-height:1.5;
 }
 
 .note-actions{
@@ -418,8 +383,6 @@ input,select,textarea{
 .note-actions button{
     flex:1;
 }
-
-/* FOOTER */
 
 footer{
     margin-top:60px;
@@ -445,8 +408,6 @@ footer p{
     font-size:13px;
 }
 
-/* RESPONSIVE */
-
 @media(max-width:950px){
     .tools-grid{
         grid-template-columns:repeat(2,1fr);
@@ -454,11 +415,6 @@ footer p{
 }
 
 @media(max-width:700px){
-
-    .navbar{
-        padding:12px 5%;
-    }
-
     .nav-links{
         display:none;
         position:absolute;
@@ -485,685 +441,382 @@ footer p{
 
     .hero{
         min-height:500px;
-        padding-top:60px;
-    }
-
-    .hero p{
-        font-size:16px;
     }
 
     .section-title h2{
         font-size:32px;
     }
-
-    .tool-card{
-        padding:21px;
-    }
 }
 </style>
-
-<!-- Structured data helps search engines understand the website -->
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"NooriTools",
-  "url":"https://kn7187620-oss.github.io/nooritools/",
-  "description":"Free online tools for everyday life.",
-  "potentialAction":{
-    "@type":"SearchAction",
-    "target":"https://kn7187620-oss.github.io/nooritools/?q={search_term_string}",
-    "query-input":"required name=search_term_string"
-  }
-}
-</script>
-
 </head>
 
 <body>
 
 <nav class="navbar">
 
-```
-<div class="logo">
-    <div class="logo-n">N</div>
-    <span>NooriTools</span>
-</div>
+    <div class="logo">
+        <div class="logo-n">N</div>
+        <span>NooriTools</span>
+    </div>
 
-<button class="menu-btn"
-        onclick="toggleMenu()"
-        aria-label="Open navigation menu">
-    ☰
-</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#about">About</a></li>
-</ul>
-```
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
 
 </nav>
 
 <section class="hero" id="home">
 
-```
-<div class="hero-content">
+    <div class="hero-content">
 
-    <div class="badge">
-        ⚡ 15 Smart Everyday Tools
-    </div>
+        <div class="badge">⚡ 15 Smart Everyday Tools</div>
 
-    <h1>NooriTools</h1>
+        <h1>NooriTools</h1>
 
-    <p>
-        Free, fast and useful online tools designed to make
-        everyday digital tasks easier — all in one place.
-    </p>
+        <p>
+            A powerful collection of simple, fast and useful tools
+            designed to make everyday tasks easier.
+        </p>
 
-    <div class="hero-buttons">
-
-        <a href="#tools" class="btn btn-primary">
-            Explore Tools
-        </a>
-
-        <a href="#about" class="btn btn-secondary">
-            About NooriTools
-        </a>
+        <div class="hero-buttons">
+            <a href="#tools" class="btn btn-primary">Explore Tools</a>
+            <a href="#about" class="btn btn-secondary">About NooriTools</a>
+        </div>
 
     </div>
-
-</div>
-```
 
 </section>
 
 <section class="tools-section" id="tools">
 
-```
-<div class="section-title">
-
-    <h2>Free Online Tools</h2>
-
-    <p>
-        Calculate, convert, create and organize things quickly.
-    </p>
-
-</div>
-
-<div class="search-box">
-
-    <input
-        type="text"
-        id="toolSearch"
-        placeholder="🔎 Search tools..."
-        aria-label="Search NooriTools"
-        oninput="searchTools()"
-    >
-
-</div>
-
-<div class="tool-count" id="toolCount">
-    Showing 15 tools
-</div>
-
-<div class="tools-grid" id="toolsGrid">
-
-    <!-- 1 -->
-    <div class="tool-card" data-name="calculator smart calculator math">
-
-        <div class="tool-icon">🧮</div>
-
-        <h3>Smart Calculator</h3>
-
-        <p>
-            Perform quick mathematical calculations.
-        </p>
-
-        <input
-            id="calcInput"
-            placeholder="Example: 25*4+10"
-            aria-label="Calculation"
-        >
-
-        <button class="tool-btn" onclick="calculate()">
-            Calculate
-        </button>
-
-        <div class="result" id="calcResult"></div>
-
+    <div class="section-title">
+        <h2>All Tools</h2>
+        <p>Everything you need in one place.</p>
     </div>
 
-    <!-- 2 -->
-    <div class="tool-card" data-name="currency converter afn pkr afghani pakistani rupee">
-
-        <div class="tool-icon">💱</div>
-
-        <h3>Currency Converter</h3>
-
-        <p>
-            Convert PKR and AFN using a reference rate.
-        </p>
-
-        <select id="currencyFrom">
-            <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
-            <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
-        </select>
-
-        <select id="currencyTo">
-            <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
-            <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
-        </select>
-
+    <div class="search-box">
         <input
-            type="number"
-            id="currencyAmount"
-            value="100"
-            placeholder="Amount"
+            type="text"
+            id="toolSearch"
+            placeholder="🔎 Search tools..."
+            oninput="searchTools()"
         >
-
-        <button class="tool-btn" onclick="convertCurrency()">
-            Convert
-        </button>
-
-        <div class="result" id="currencyResult"></div>
-
-        <small style="display:block;color:#7f91a8;margin-top:8px;">
-            Reference rate: 1 AFN ≈ 4.25 PKR. Rates can change.
-        </small>
-
     </div>
 
-    <!-- 3 -->
-    <div class="tool-card" data-name="age calculator birthday birth date">
+    <div class="tools-grid" id="toolsGrid">
 
-        <div class="tool-icon">🎂</div>
+        <div class="tool-card" data-name="calculator">
+            <div class="tool-icon">🧮</div>
+            <h3>Smart Calculator</h3>
+            <p>Perform quick mathematical calculations.</p>
 
-        <h3>Age Calculator</h3>
-
-        <p>
-            Calculate your age from your birth date.
-        </p>
-
-        <input
-            type="date"
-            id="birthDate"
-            aria-label="Birth date"
-        >
-
-        <button class="tool-btn" onclick="calculateAge()">
-            Calculate Age
-        </button>
-
-        <div class="result" id="ageResult"></div>
-
-    </div>
-
-    <!-- 4 -->
-    <div class="tool-card" data-name="date difference date calculator days">
-
-        <div class="tool-icon">📅</div>
-
-        <h3>Date Difference</h3>
-
-        <p>
-            Find the number of days between two dates.
-        </p>
-
-        <input type="date" id="dateOne">
-        <input type="date" id="dateTwo">
-
-        <button class="tool-btn" onclick="dateDifference()">
-            Calculate
-        </button>
-
-        <div class="result" id="dateResult"></div>
-
-    </div>
-
-    <!-- 5 -->
-    <div class="tool-card" data-name="countdown timer countdown timer">
-
-        <div class="tool-icon">⏳</div>
-
-        <h3>Countdown Timer</h3>
-
-        <p>
-            Set a simple countdown in minutes and seconds.
-        </p>
-
-        <input
-            type="number"
-            id="timerMinutes"
-            placeholder="Minutes"
-            min="0"
-        >
-
-        <input
-            type="number"
-            id="timerSeconds"
-            placeholder="Seconds"
-            min="0"
-            max="59"
-        >
-
-        <button class="tool-btn" onclick="startTimer()">
-            Start Countdown
-        </button>
-
-        <button class="tool-btn" onclick="stopTimer()">
-            Stop
-        </button>
-
-        <div class="result" id="timerResult">
-            00:00
+            <input id="calcInput" placeholder="Example: 25*4+10">
+            <button class="tool-btn" onclick="calculate()">Calculate</button>
+            <div class="result" id="calcResult"></div>
         </div>
 
-    </div>
+        <div class="tool-card" data-name="currency converter afn pkr">
+            <div class="tool-icon">💱</div>
+            <h3>Currency Converter</h3>
+            <p>Convert PKR and AFN quickly.</p>
 
-    <!-- 6 -->
-    <div class="tool-card" data-name="weather weather tool city forecast">
+            <select id="currencyFrom">
+                <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
+                <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
+            </select>
 
-        <div class="tool-icon">🌤️</div>
+            <select id="currencyTo">
+                <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
+                <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
+            </select>
 
-        <h3>Weather Tool</h3>
+            <input type="number" id="currencyAmount" value="100" placeholder="Amount">
 
-        <p>
-            Open a weather search for any city.
-        </p>
+            <button class="tool-btn" onclick="convertCurrency()">Convert</button>
 
-        <input
-            id="weatherCity"
-            placeholder="Example: Karachi"
-        >
+            <div class="result" id="currencyResult"></div>
 
-        <button class="tool-btn" onclick="openWeather()">
-            Check Weather
-        </button>
-
-        <div class="result">
-            Opens a weather search in a new tab.
+            <small style="display:block;color:#7f91a8;margin-top:8px;">
+                Reference rate: 1 AFN ≈ 4.25 PKR
+            </small>
         </div>
 
-    </div>
+        <div class="tool-card" data-name="age calculator">
+            <div class="tool-icon">🎂</div>
+            <h3>Age Calculator</h3>
+            <p>Calculate your age from your birth date.</p>
 
-    <!-- 7 -->
-    <div class="tool-card" data-name="percentage calculator percent percentage">
-
-        <div class="tool-icon">％</div>
-
-        <h3>Percentage Calculator</h3>
-
-        <p>
-            Calculate a percentage of a number.
-        </p>
-
-        <input
-            type="number"
-            id="percentNumber"
-            placeholder="Number"
-        >
-
-        <input
-            type="number"
-            id="percentValue"
-            placeholder="Percentage"
-        >
-
-        <button class="tool-btn" onclick="percentage()">
-            Calculate
-        </button>
-
-        <div class="result" id="percentResult"></div>
-
-    </div>
-
-    <!-- 8 -->
-    <div class="tool-card" data-name="unit converter length weight meters kilometers feet kilograms pounds">
-
-        <div class="tool-icon">📏</div>
-
-        <h3>Unit Converter</h3>
-
-        <p>
-            Convert common length and weight units.
-        </p>
-
-        <input
-            type="number"
-            id="unitAmount"
-            placeholder="Amount"
-        >
-
-        <select id="unitFrom">
-            <option value="m">Meters</option>
-            <option value="km">Kilometers</option>
-            <option value="cm">Centimeters</option>
-            <option value="ft">Feet</option>
-            <option value="kg">Kilograms</option>
-            <option value="lb">Pounds</option>
-        </select>
-
-        <select id="unitTo">
-            <option value="km">Kilometers</option>
-            <option value="m">Meters</option>
-            <option value="cm">Centimeters</option>
-            <option value="ft">Feet</option>
-            <option value="lb">Pounds</option>
-            <option value="kg">Kilograms</option>
-        </select>
-
-        <button class="tool-btn" onclick="convertUnit()">
-            Convert
-        </button>
-
-        <div class="result" id="unitResult"></div>
-
-    </div>
-
-    <!-- 9 -->
-    <div class="tool-card" data-name="word counter character counter text words">
-
-        <div class="tool-icon">📝</div>
-
-        <h3>Word Counter</h3>
-
-        <p>
-            Count words and characters instantly.
-        </p>
-
-        <textarea
-            id="wordText"
-            placeholder="Type or paste your text..."
-            oninput="countWords()"
-        ></textarea>
-
-        <div class="result" id="wordResult">
-            Words: 0 | Characters: 0
+            <input type="date" id="birthDate">
+            <button class="tool-btn" onclick="calculateAge()">Calculate Age</button>
+            <div class="result" id="ageResult"></div>
         </div>
 
-    </div>
+        <div class="tool-card" data-name="date difference date calculator">
+            <div class="tool-icon">📅</div>
+            <h3>Date Difference</h3>
+            <p>Find the number of days between two dates.</p>
 
-    <!-- 10 -->
-    <div class="tool-card" data-name="password generator secure random password">
+            <input type="date" id="dateOne">
+            <input type="date" id="dateTwo">
 
-        <div class="tool-icon">🔐</div>
-
-        <h3>Password Generator</h3>
-
-        <p>
-            Create a random password for your accounts.
-        </p>
-
-        <input
-            type="number"
-            id="passwordLength"
-            value="16"
-            min="6"
-            max="50"
-        >
-
-        <button class="tool-btn" onclick="generatePassword()">
-            Generate
-        </button>
-
-        <button class="tool-btn" onclick="copyText('passwordResult')">
-            Copy Password
-        </button>
-
-        <div class="result" id="passwordResult"></div>
-
-    </div>
-
-    <!-- 11 -->
-    <div class="tool-card" data-name="qr code generator qr qr generator link url">
-
-        <div class="tool-icon">▦</div>
-
-        <h3>QR Code Generator</h3>
-
-        <p>
-            Create a QR code from text or a website link.
-        </p>
-
-        <input
-            id="qrText"
-            placeholder="Enter text or URL"
-        >
-
-        <button class="tool-btn" onclick="generateQR()">
-            Generate QR
-        </button>
-
-        <div
-            class="result"
-            id="qrResult"
-            style="text-align:center;"
-        ></div>
-
-    </div>
-
-    <!-- 12 -->
-    <div class="tool-card" data-name="color picker color hex">
-
-        <div class="tool-icon">🎨</div>
-
-        <h3>Color Picker</h3>
-
-        <p>
-            Choose a color and copy its HEX value.
-        </p>
-
-        <input
-            type="color"
-            id="colorPicker"
-            value="#00eaff"
-            style="height:60px;padding:4px;"
-            oninput="showColor()"
-        >
-
-        <div class="result" id="colorResult">
-            #00EAFF
+            <button class="tool-btn" onclick="dateDifference()">Calculate</button>
+            <div class="result" id="dateResult"></div>
         </div>
 
-        <button class="tool-btn" onclick="copyText('colorResult')">
-            Copy HEX
-        </button>
+        <div class="tool-card" data-name="countdown timer">
+            <div class="tool-icon">⏳</div>
+            <h3>Countdown Timer</h3>
+            <p>Set a simple countdown in minutes and seconds.</p>
 
-    </div>
+            <input type="number" id="timerMinutes" placeholder="Minutes" min="0">
+            <input type="number" id="timerSeconds" placeholder="Seconds" min="0" max="59">
 
-    <!-- 13 -->
-    <div class="tool-card" data-name="bmi calculator body mass index health">
+            <button class="tool-btn" onclick="startTimer()">Start Countdown</button>
+            <button class="tool-btn" onclick="stopTimer()">Stop</button>
 
-        <div class="tool-icon">⚖️</div>
+            <div class="result" id="timerResult">00:00</div>
+        </div>
 
-        <h3>BMI Calculator</h3>
+        <div class="tool-card" data-name="weather">
+            <div class="tool-icon">🌤️</div>
+            <h3>Weather Tool</h3>
+            <p>Open a weather search for any city.</p>
 
-        <p>
-            Calculate BMI using height and weight.
-        </p>
+            <input id="weatherCity" placeholder="Example: Karachi">
 
-        <input
-            type="number"
-            id="bmiWeight"
-            placeholder="Weight (kg)"
-        >
-
-        <input
-            type="number"
-            id="bmiHeight"
-            placeholder="Height (cm)"
-        >
-
-        <button class="tool-btn" onclick="calculateBMI()">
-            Calculate BMI
-        </button>
-
-        <div class="result" id="bmiResult"></div>
-
-    </div>
-
-    <!-- 14 -->
-    <div class="tool-card" data-name="tip calculator bill tip money">
-
-        <div class="tool-icon">💰</div>
-
-        <h3>Tip Calculator</h3>
-
-        <p>
-            Calculate tip and total bill quickly.
-        </p>
-
-        <input
-            type="number"
-            id="billAmount"
-            placeholder="Bill amount"
-        >
-
-        <input
-            type="number"
-            id="tipPercent"
-            placeholder="Tip %"
-            value="10"
-        >
-
-        <button class="tool-btn" onclick="calculateTip()">
-            Calculate
-        </button>
-
-        <div class="result" id="tipResult"></div>
-
-    </div>
-
-    <!-- 15 -->
-    <div class="tool-card" data-name="notes quick notes notepad save notes">
-
-        <div class="tool-icon">📋</div>
-
-        <h3>Quick Notes</h3>
-
-        <p>
-            Write notes and keep them in your browser.
-        </p>
-
-        <textarea
-            id="notes"
-            placeholder="Write your notes..."
-        ></textarea>
-
-        <div class="note-actions">
-
-            <button class="tool-btn" onclick="saveNotes()">
-                Save
+            <button class="tool-btn" onclick="openWeather()">
+                Check Weather
             </button>
 
-            <button class="tool-btn" onclick="clearNotes()">
-                Clear
-            </button>
-
+            <div class="result">
+                Opens a weather search in a new tab.
+            </div>
         </div>
 
-        <div class="result" id="notesResult"></div>
+        <div class="tool-card" data-name="percentage calculator">
+            <div class="tool-icon">％</div>
+            <h3>Percentage Calculator</h3>
+            <p>Calculate a percentage of a number.</p>
+
+            <input type="number" id="percentNumber" placeholder="Number">
+            <input type="number" id="percentValue" placeholder="Percentage">
+
+            <button class="tool-btn" onclick="percentage()">Calculate</button>
+
+            <div class="result" id="percentResult"></div>
+        </div>
+
+        <div class="tool-card" data-name="unit converter length weight">
+            <div class="tool-icon">📏</div>
+            <h3>Unit Converter</h3>
+            <p>Convert common length and weight units.</p>
+
+            <input type="number" id="unitAmount" placeholder="Amount">
+
+            <select id="unitFrom">
+                <option value="m">Meters</option>
+                <option value="km">Kilometers</option>
+                <option value="cm">Centimeters</option>
+                <option value="ft">Feet</option>
+                <option value="kg">Kilograms</option>
+                <option value="lb">Pounds</option>
+            </select>
+
+            <select id="unitTo">
+                <option value="km">Kilometers</option>
+                <option value="m">Meters</option>
+                <option value="cm">Centimeters</option>
+                <option value="ft">Feet</option>
+                <option value="lb">Pounds</option>
+                <option value="kg">Kilograms</option>
+            </select>
+
+            <button class="tool-btn" onclick="convertUnit()">Convert</button>
+
+            <div class="result" id="unitResult"></div>
+        </div>
+
+        <div class="tool-card" data-name="word character counter">
+            <div class="tool-icon">📝</div>
+            <h3>Word Counter</h3>
+            <p>Count words and characters instantly.</p>
+
+            <textarea
+                id="wordText"
+                placeholder="Type or paste your text..."
+                oninput="countWords()"
+            ></textarea>
+
+            <div class="result" id="wordResult">
+                Words: 0 | Characters: 0
+            </div>
+        </div>
+
+        <div class="tool-card" data-name="password generator">
+            <div class="tool-icon">🔐</div>
+            <h3>Password Generator</h3>
+            <p>Create a random strong password for your accounts.</p>
+
+            <input
+                type="number"
+                id="passwordLength"
+                value="16"
+                min="6"
+                max="50"
+            >
+
+            <button class="tool-btn" onclick="generatePassword()">
+                Generate
+            </button>
+
+            <button class="tool-btn" onclick="copyText('passwordResult')">
+                Copy Password
+            </button>
+
+            <div class="result" id="passwordResult"></div>
+        </div>
+
+        <div class="tool-card" data-name="qr code generator">
+            <div class="tool-icon">▦</div>
+            <h3>QR Code Generator</h3>
+            <p>Create a QR code from text or a website link.</p>
+
+            <input id="qrText" placeholder="Enter text or URL">
+
+            <button class="tool-btn" onclick="generateQR()">
+                Generate QR
+            </button>
+
+            <div class="result" id="qrResult" style="text-align:center;"></div>
+        </div>
+
+        <div class="tool-card" data-name="color picker">
+            <div class="tool-icon">🎨</div>
+            <h3>Color Picker</h3>
+            <p>Choose a color and copy its HEX value.</p>
+
+            <input
+                type="color"
+                id="colorPicker"
+                value="#00eaff"
+                style="height:60px;padding:4px;"
+                oninput="showColor()"
+            >
+
+            <div class="result" id="colorResult">#00EAFF</div>
+
+            <button class="tool-btn" onclick="copyText('colorResult')">
+                Copy HEX
+            </button>
+        </div>
+
+        <div class="tool-card" data-name="bmi calculator">
+            <div class="tool-icon">⚖️</div>
+            <h3>BMI Calculator</h3>
+            <p>Calculate BMI using height and weight.</p>
+
+            <input type="number" id="bmiWeight" placeholder="Weight (kg)">
+            <input type="number" id="bmiHeight" placeholder="Height (cm)">
+
+            <button class="tool-btn" onclick="calculateBMI()">
+                Calculate BMI
+            </button>
+
+            <div class="result" id="bmiResult"></div>
+        </div>
+
+        <div class="tool-card" data-name="tip calculator">
+            <div class="tool-icon">💰</div>
+            <h3>Tip Calculator</h3>
+            <p>Calculate tip and total bill quickly.</p>
+
+            <input type="number" id="billAmount" placeholder="Bill amount">
+            <input type="number" id="tipPercent" placeholder="Tip %" value="10">
+
+            <button class="tool-btn" onclick="calculateTip()">
+                Calculate
+            </button>
+
+            <div class="result" id="tipResult"></div>
+        </div>
+
+        <div class="tool-card" data-name="notes quick notes notepad">
+            <div class="tool-icon">📋</div>
+            <h3>Quick Notes</h3>
+            <p>Write notes and keep them in your browser.</p>
+
+            <textarea
+                id="notes"
+                placeholder="Write your notes..."
+            ></textarea>
+
+            <div class="note-actions">
+                <button class="tool-btn" onclick="saveNotes()">Save</button>
+                <button class="tool-btn" onclick="clearNotes()">Clear</button>
+            </div>
+
+            <div class="result" id="notesResult"></div>
+        </div>
 
     </div>
-
-</div>
-```
-
 </section>
 
 <section class="tools-section" id="about">
 
-```
-<div class="section-title">
+    <div class="section-title">
 
-    <h2>About NooriTools</h2>
+        <h2>About NooriTools</h2>
 
-    <p>
-        NooriTools is a free all-in-one online toolbox for
-        everyday digital tasks. It brings useful calculators,
-        converters, generators and productivity tools together
-        in one simple website.
-    </p>
+        <p>
+            NooriTools is a simple all-in-one toolbox
+            for everyday digital tasks.
+        </p>
 
-</div>
-```
+    </div>
 
 </section>
 
 <footer>
 
-```
-<div class="footer-logo">
-    <span style="color:#00eaff;">N</span> NooriTools
-</div>
+    <div class="footer-logo">
+        <span style="color:#00eaff;">N</span> NooriTools
+    </div>
 
-<p>
-    Smart tools. Simple experience. One powerful website.
-</p>
+    <p>
+        Smart tools. Simple experience. One powerful website.
+    </p>
 
-<p class="footer-small">
-    © 2026 NooriTools. All rights reserved.
-</p>
-```
+    <p class="footer-small">
+        © 2026 NooriTools. All rights reserved.
+    </p>
 
 </footer>
 
 <script>
 
-/* NAVIGATION */
-
 function toggleMenu(){
-
-    document
-        .getElementById("navLinks")
-        .classList.toggle("active");
-
+    document.getElementById("navLinks").classList.toggle("active");
 }
-
-/* SEARCH */
 
 function searchTools(){
 
     const query =
-        document
-        .getElementById("toolSearch")
-        .value
-        .toLowerCase()
-        .trim();
+        document.getElementById("toolSearch").value.toLowerCase();
 
-    const cards =
-        document.querySelectorAll(".tool-card");
-
-    let visible = 0;
-
-    cards.forEach(card=>{
+    document.querySelectorAll(".tool-card").forEach(card=>{
 
         const name =
             card.dataset.name.toLowerCase();
 
-        if(name.includes(query)){
-
-            card.style.display = "";
-
-            visible++;
-
-        }else{
-
-            card.style.display = "none";
-
-        }
+        card.style.display =
+            name.includes(query) ? "block" : "none";
 
     });
-
-    document.getElementById("toolCount").textContent =
-        "Showing " + visible + " tool" +
-        (visible === 1 ? "" : "s");
-
 }
-
-/* CALCULATOR */
 
 function calculate(){
 
@@ -1174,12 +827,8 @@ function calculate(){
         document.getElementById("calcResult");
 
     if(!input){
-
-        output.textContent =
-            "Enter a calculation.";
-
+        output.textContent = "Enter a calculation.";
         return;
-
     }
 
     try{
@@ -1190,14 +839,8 @@ function calculate(){
 
         const result =
             Function(
-                '"use strict"; return (' +
-                input +
-                ')'
+                '"use strict"; return (' + input + ')'
             )();
-
-        if(!Number.isFinite(result)){
-            throw new Error();
-        }
 
         output.textContent =
             "Result: " + result;
@@ -1208,10 +851,7 @@ function calculate(){
             "Invalid calculation.";
 
     }
-
 }
-
-/* CURRENCY */
 
 const AFN_TO_PKR = 4.25;
 
@@ -1231,50 +871,35 @@ function convertCurrency(){
     const result =
         document.getElementById("currencyResult");
 
-    if(!Number.isFinite(amount) || amount < 0){
-
+    if(isNaN(amount)){
         result.textContent =
-            "Enter a valid amount.";
-
+            "Enter an amount.";
         return;
-
     }
 
     let converted;
 
     if(from === to){
-
         converted = amount;
-
-    }else if(
-        from === "AFN" &&
-        to === "PKR"
-    ){
-
+    }
+    else if(from === "AFN" && to === "PKR"){
         converted =
             amount * AFN_TO_PKR;
-
-    }else{
-
+    }
+    else{
         converted =
             amount / AFN_TO_PKR;
-
     }
 
     result.textContent =
         amount.toLocaleString() +
-        " " +
-        from +
+        " " + from +
         " = " +
         converted.toLocaleString(undefined,{
             maximumFractionDigits:4
         }) +
-        " " +
-        to;
-
+        " " + to;
 }
-
-/* AGE */
 
 function calculateAge(){
 
@@ -1285,28 +910,16 @@ function calculateAge(){
         document.getElementById("ageResult");
 
     if(!birth){
-
         result.textContent =
             "Select your birth date.";
-
         return;
-
     }
 
     const birthDate =
-        new Date(birth + "T00:00:00");
+        new Date(birth);
 
     const today =
         new Date();
-
-    if(birthDate > today){
-
-        result.textContent =
-            "Birth date cannot be in the future.";
-
-        return;
-
-    }
 
     let age =
         today.getFullYear() -
@@ -1320,48 +933,39 @@ function calculateAge(){
         month < 0 ||
         (
             month === 0 &&
-            today.getDate() < birthDate.getDate()
+            today.getDate() <
+            birthDate.getDate()
         )
     ){
-
         age--;
-
     }
 
     result.textContent =
         "Your age is approximately " +
         age +
         " years.";
-
 }
-
-/* DATE DIFFERENCE */
 
 function dateDifference(){
 
-    const oneValue =
-        document.getElementById("dateOne").value;
+    const one =
+        new Date(
+            document.getElementById("dateOne").value
+        );
 
-    const twoValue =
-        document.getElementById("dateTwo").value;
+    const two =
+        new Date(
+            document.getElementById("dateTwo").value
+        );
 
     const result =
         document.getElementById("dateResult");
 
-    if(!oneValue || !twoValue){
-
+    if(isNaN(one) || isNaN(two)){
         result.textContent =
             "Select both dates.";
-
         return;
-
     }
-
-    const one =
-        new Date(oneValue + "T00:00:00");
-
-    const two =
-        new Date(twoValue + "T00:00:00");
 
     const days =
         Math.round(
@@ -1372,10 +976,7 @@ function dateDifference(){
     result.textContent =
         days +
         " day(s) between the selected dates.";
-
 }
-
-/* COUNTDOWN */
 
 let timerInterval = null;
 let timerSecondsLeft = 0;
@@ -1394,15 +995,6 @@ function startTimer(){
             document.getElementById("timerSeconds").value
         ) || 0;
 
-    if(minutes < 0 || seconds < 0 || seconds > 59){
-
-        document.getElementById("timerResult").textContent =
-            "Enter valid time.";
-
-        return;
-
-    }
-
     timerSecondsLeft =
         minutes * 60 + seconds;
 
@@ -1412,7 +1004,6 @@ function startTimer(){
             "Enter a time greater than 0.";
 
         return;
-
     }
 
     updateTimerDisplay();
@@ -1434,15 +1025,10 @@ function startTimer(){
             }
 
         },1000);
-
 }
 
 function stopTimer(){
-
     clearInterval(timerInterval);
-
-    timerInterval = null;
-
 }
 
 function updateTimerDisplay(){
@@ -1459,36 +1045,24 @@ function updateTimerDisplay(){
         String(mins).padStart(2,"0") +
         ":" +
         String(secs).padStart(2,"0");
-
 }
-
-/* WEATHER */
 
 function openWeather(){
 
     const city =
-        document.getElementById("weatherCity")
-        .value
-        .trim();
+        document.getElementById("weatherCity").value.trim();
 
     if(!city){
-
         alert("Enter a city first.");
-
         return;
-
     }
 
     window.open(
         "https://www.google.com/search?q=weather+" +
         encodeURIComponent(city),
-        "_blank",
-        "noopener,noreferrer"
+        "_blank"
     );
-
 }
-
-/* PERCENTAGE */
 
 function percentage(){
 
@@ -1505,16 +1079,12 @@ function percentage(){
     const result =
         document.getElementById("percentResult");
 
-    if(
-        !Number.isFinite(number) ||
-        !Number.isFinite(percent)
-    ){
+    if(isNaN(number) || isNaN(percent)){
 
         result.textContent =
             "Enter both values.";
 
         return;
-
     }
 
     result.textContent =
@@ -1523,10 +1093,7 @@ function percentage(){
         number +
         " = " +
         (number * percent / 100);
-
 }
-
-/* UNIT CONVERTER */
 
 function convertUnit(){
 
@@ -1544,13 +1111,12 @@ function convertUnit(){
     const result =
         document.getElementById("unitResult");
 
-    if(!Number.isFinite(amount)){
+    if(isNaN(amount)){
 
         result.textContent =
             "Enter an amount.";
 
         return;
-
     }
 
     const lengthUnits =
@@ -1574,7 +1140,6 @@ function convertUnit(){
             "Choose units from the same category.";
 
         return;
-
     }
 
     let value;
@@ -1584,8 +1149,8 @@ function convertUnit(){
         const toMeters = {
             m:1,
             km:1000,
-            cm:0.01,
-            ft:0.3048
+            cm:.01,
+            ft:.3048
         };
 
         value =
@@ -1597,14 +1162,13 @@ function convertUnit(){
 
         const toKg = {
             kg:1,
-            lb:0.45359237
+            lb:.45359237
         };
 
         value =
             amount *
             toKg[from] /
             toKg[to];
-
     }
 
     result.textContent =
@@ -1617,10 +1181,7 @@ function convertUnit(){
         }) +
         " " +
         to;
-
 }
-
-/* WORD COUNTER */
 
 function countWords(){
 
@@ -1631,9 +1192,9 @@ function countWords(){
         text.trim();
 
     const words =
-        trimmed
-        ? trimmed.split(/\s+/).length
-        : 0;
+        trimmed ?
+        trimmed.split(/\s+/).length :
+        0;
 
     const characters =
         text.length;
@@ -1643,10 +1204,7 @@ function countWords(){
         words +
         " | Characters: " +
         characters;
-
 }
-
-/* PASSWORD */
 
 function generatePassword(){
 
@@ -1654,15 +1212,6 @@ function generatePassword(){
         parseInt(
             document.getElementById("passwordLength").value
         ) || 16;
-
-    if(length < 6 || length > 50){
-
-        document.getElementById("passwordResult").textContent =
-            "Choose a length between 6 and 50.";
-
-        return;
-
-    }
 
     const chars =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
@@ -1672,42 +1221,21 @@ function generatePassword(){
 
     let password = "";
 
-    if(window.crypto && crypto.getRandomValues){
+    for(let i=0;i<length;i++){
 
-        const values =
-            new Uint32Array(length);
-
-        crypto.getRandomValues(values);
-
-        for(let i=0;i<length;i++){
-
-            password +=
-                chars[values[i] % chars.length];
-
-        }
-
-    }else{
-
-        for(let i=0;i<length;i++){
-
-            password +=
-                chars[
-                    Math.floor(
-                        Math.random() *
-                        chars.length
-                    )
-                ];
-
-        }
+        password +=
+            chars[
+                Math.floor(
+                    Math.random() *
+                    chars.length
+                )
+            ];
 
     }
 
     document.getElementById("passwordResult").textContent =
         password;
-
 }
-
-/* COPY */
 
 async function copyText(id){
 
@@ -1718,9 +1246,7 @@ async function copyText(id){
         element.textContent.trim();
 
     if(!text){
-
         return;
-
     }
 
     try{
@@ -1736,28 +1262,22 @@ async function copyText(id){
         );
 
     }
-
 }
-
-/* QR CODE */
 
 function generateQR(){
 
     const text =
-        document.getElementById("qrText")
-        .value
-        .trim();
+        document.getElementById("qrText").value.trim();
 
     const result =
         document.getElementById("qrResult");
 
     if(!text){
 
-        result.textContent =
+        result.innerHTML =
             "Enter text or a URL.";
 
         return;
-
     }
 
     const url =
@@ -1767,12 +1287,8 @@ function generateQR(){
     result.innerHTML =
         '<img src="' +
         url +
-        '" alt="Generated QR Code" ' +
-        'style="width:180px;height:180px;border-radius:10px;">';
-
+        '" alt="QR Code" style="width:180px;height:180px;border-radius:10px;">';
 }
-
-/* COLOR */
 
 function showColor(){
 
@@ -1783,10 +1299,7 @@ function showColor(){
 
     document.getElementById("colorResult").textContent =
         color;
-
 }
-
-/* BMI */
 
 function calculateBMI(){
 
@@ -1804,8 +1317,8 @@ function calculateBMI(){
         document.getElementById("bmiResult");
 
     if(
-        !Number.isFinite(weight) ||
-        !Number.isFinite(height) ||
+        isNaN(weight) ||
+        isNaN(height) ||
         weight <= 0 ||
         height <= 0
     ){
@@ -1814,7 +1327,6 @@ function calculateBMI(){
             "Enter valid height and weight.";
 
         return;
-
     }
 
     const meters =
@@ -1827,10 +1339,7 @@ function calculateBMI(){
     result.textContent =
         "BMI: " +
         bmi.toFixed(1);
-
 }
-
-/* TIP */
 
 function calculateTip(){
 
@@ -1848,17 +1357,14 @@ function calculateTip(){
         document.getElementById("tipResult");
 
     if(
-        !Number.isFinite(bill) ||
-        !Number.isFinite(tipPercent) ||
-        bill < 0 ||
-        tipPercent < 0
+        isNaN(bill) ||
+        isNaN(tipPercent)
     ){
 
         result.textContent =
-            "Enter valid values.";
+            "Enter both values.";
 
         return;
-
     }
 
     const tip =
@@ -1875,10 +1381,7 @@ function calculateTip(){
         tip.toFixed(2) +
         "<br>Total: " +
         total.toFixed(2);
-
 }
-
-/* NOTES */
 
 function saveNotes(){
 
@@ -1892,21 +1395,19 @@ function saveNotes(){
 
     document.getElementById("notesResult").textContent =
         "✓ Notes saved in this browser.";
-
 }
 
 function clearNotes(){
 
     document.getElementById("notes").value = "";
 
-    localStorage.removeItem("nooriNotes");
+    localStorage.removeItem(
+        "nooriNotes"
+    );
 
     document.getElementById("notesResult").textContent =
         "Notes cleared.";
-
 }
-
-/* LOAD */
 
 window.addEventListener("load",()=>{
 
@@ -1921,23 +1422,6 @@ window.addEventListener("load",()=>{
     }
 
     showColor();
-
-    searchTools();
-
-});
-
-/* CLOSE MOBILE MENU AFTER CLICK */
-
-document.querySelectorAll(".nav-links a")
-.forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        document
-            .getElementById("navLinks")
-            .classList.remove("active");
-
-    });
 
 });
 
