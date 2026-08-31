@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kn7187620-oss.github.io/nooritools/sitemap.xml
