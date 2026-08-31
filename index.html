@@ -1,0 +1,1340 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NooriTools | Smart Daily Tools</title>
+<meta name="description" content="NooriTools - 15 powerful and useful online tools for everyday life.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07111f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(0,255,255,.12),transparent 30%),
+        radial-gradient(circle at 85% 15%,rgba(160,80,255,.14),transparent 30%),
+        radial-gradient(circle at 50% 90%,rgba(0,150,255,.10),transparent 35%),
+        #07111f;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00eaff,#8b5cf6,#ff2bd6);
+    filter:blur(150px);
+    opacity:.12;
+    top:20%;
+    left:40%;
+    z-index:-2;
+    animation:floatBg 10s infinite alternate ease-in-out;
+}
+
+@keyframes floatBg{
+    from{transform:translate(-100px,-50px);}
+    to{transform:translate(100px,70px);}
+}
+
+/* NAVBAR */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 6%;
+    background:rgba(5,12,25,.86);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.logo-n{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:1000;
+    background:linear-gradient(135deg,#00eaff,#7c4dff,#ff29d9);
+    box-shadow:0 0 25px rgba(0,234,255,.35);
+    position:relative;
+    overflow:hidden;
+}
+
+.logo-n::after{
+    content:"";
+    position:absolute;
+    inset:-30px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+    transform:rotate(25deg);
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    0%{left:-150%;}
+    50%,100%{left:150%;}
+}
+
+.logo span{
+    background:linear-gradient(90deg,#00eaff,#b66cff,#ff5cdd);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#dbeafe;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00eaff;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px 60px;
+    position:relative;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    border:1px solid rgba(0,234,255,.35);
+    background:rgba(0,234,255,.08);
+    border-radius:30px;
+    color:#7defff;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,92px);
+    line-height:1;
+    margin-bottom:25px;
+    background:linear-gradient(90deg,#00eaff,#ffffff,#b66cff,#ff3dd8);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradientMove 6s linear infinite;
+    background-size:250%;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0%;}
+    100%{background-position:250%;}
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#a9b8cc;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:800;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,.12);
+    transition:.3s;
+}
+
+.btn-primary{
+    color:#03111c;
+    background:linear-gradient(135deg,#00eaff,#8b7cff);
+}
+
+.btn-secondary{
+    color:white;
+    background:rgba(255,255,255,.06);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 35px rgba(0,234,255,.18);
+}
+
+/* TOOLS */
+.tools-section{
+    max-width:1250px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#94a3b8;
+}
+
+.search-box{
+    max-width:700px;
+    margin:0 auto 45px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:17px 22px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.06);
+    color:white;
+    outline:none;
+    font-size:16px;
+}
+
+.search-box input:focus{
+    border-color:#00eaff;
+    box-shadow:0 0 20px rgba(0,234,255,.12);
+}
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.tool-card{
+    background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    padding:25px;
+    min-height:250px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.tool-card::before{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#00eaff;
+    filter:blur(80px);
+    opacity:.08;
+    right:-50px;
+    top:-50px;
+}
+
+.tool-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(0,234,255,.35);
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.tool-icon{
+    font-size:35px;
+    margin-bottom:13px;
+}
+
+.tool-card h3{
+    margin-bottom:8px;
+    font-size:21px;
+}
+
+.tool-card p{
+    color:#91a3b8;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+/* FORM */
+input,select,textarea{
+    font-family:inherit;
+}
+
+.tool-card input,
+.tool-card select,
+.tool-card textarea{
+    width:100%;
+    padding:12px;
+    margin:5px 0;
+    border:1px solid rgba(255,255,255,.1);
+    background:#0b1729;
+    color:white;
+    border-radius:10px;
+    outline:none;
+}
+
+.tool-card textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.tool-card input:focus,
+.tool-card select:focus,
+.tool-card textarea:focus{
+    border-color:#00eaff;
+}
+
+.tool-btn{
+    width:100%;
+    padding:11px;
+    margin-top:8px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:800;
+    background:linear-gradient(90deg,#00eaff,#7c6cff);
+    color:#03111c;
+    transition:.25s;
+}
+
+.tool-btn:hover{
+    transform:translateY(-2px);
+}
+
+.result{
+    margin-top:12px;
+    padding:11px;
+    border-radius:10px;
+    background:rgba(0,234,255,.07);
+    border:1px solid rgba(0,234,255,.12);
+    color:#dffcff;
+    min-height:20px;
+    word-break:break-word;
+}
+
+/* NOTES */
+.note-actions{
+    display:flex;
+    gap:7px;
+}
+
+.note-actions button{
+    flex:1;
+}
+
+/* FOOTER */
+footer{
+    margin-top:60px;
+    padding:45px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:rgba(0,0,0,.2);
+}
+
+.footer-logo{
+    font-size:27px;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#8190a5;
+    line-height:1.7;
+}
+
+.footer-small{
+    margin-top:18px;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+    .tools-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        flex-direction:column;
+        padding:20px;
+        background:#07111f;
+        border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .tools-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:500px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <div class="logo-n">N</div>
+        <span>NooriTools</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="badge">⚡ 15 Smart Everyday Tools</div>
+
+        <h1>NooriTools</h1>
+
+        <p>
+            A powerful collection of simple, fast and useful tools
+            designed to make everyday tasks easier.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#tools" class="btn btn-primary">Explore Tools</a>
+            <a href="#about" class="btn btn-secondary">About NooriTools</a>
+        </div>
+    </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section" id="tools">
+
+    <div class="section-title">
+        <h2>All Tools</h2>
+        <p>Everything you need in one place.</p>
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="toolSearch"
+            placeholder="🔎 Search tools..."
+            oninput="searchTools()"
+        >
+    </div>
+
+    <div class="tools-grid" id="toolsGrid">
+
+        <!-- 1 CALCULATOR -->
+        <div class="tool-card" data-name="calculator">
+            <div class="tool-icon">🧮</div>
+            <h3>Smart Calculator</h3>
+            <p>Perform quick mathematical calculations.</p>
+
+            <input id="calcInput" placeholder="Example: 25*4+10">
+            <button class="tool-btn" onclick="calculate()">Calculate</button>
+            <div class="result" id="calcResult"></div>
+        </div>
+
+        <!-- 2 CURRENCY -->
+        <div class="tool-card" data-name="currency converter afn pkr">
+            <div class="tool-icon">💱</div>
+            <h3>Currency Converter</h3>
+            <p>Convert PKR and AFN quickly.</p>
+
+            <select id="currencyFrom">
+                <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
+                <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
+            </select>
+
+            <select id="currencyTo">
+                <option value="AFN">🇦🇫 AFN — Afghan Afghani</option>
+                <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
+            </select>
+
+            <input type="number" id="currencyAmount" value="100" placeholder="Amount">
+
+            <button class="tool-btn" onclick="convertCurrency()">Convert</button>
+
+            <div class="result" id="currencyResult"></div>
+
+            <small style="display:block;color:#7f91a8;margin-top:8px;">
+                Reference rate: 1 AFN ≈ 4.25 PKR
+            </small>
+        </div>
+
+        <!-- 3 AGE -->
+        <div class="tool-card" data-name="age calculator">
+            <div class="tool-icon">🎂</div>
+            <h3>Age Calculator</h3>
+            <p>Calculate your age from your birth date.</p>
+
+            <input type="date" id="birthDate">
+            <button class="tool-btn" onclick="calculateAge()">Calculate Age</button>
+            <div class="result" id="ageResult"></div>
+        </div>
+
+        <!-- 4 DATE DIFFERENCE -->
+        <div class="tool-card" data-name="date difference date calculator">
+            <div class="tool-icon">📅</div>
+            <h3>Date Difference</h3>
+            <p>Find the number of days between two dates.</p>
+
+            <input type="date" id="dateOne">
+            <input type="date" id="dateTwo">
+
+            <button class="tool-btn" onclick="dateDifference()">Calculate</button>
+            <div class="result" id="dateResult"></div>
+        </div>
+
+        <!-- 5 COUNTDOWN -->
+        <div class="tool-card" data-name="countdown timer">
+            <div class="tool-icon">⏳</div>
+            <h3>Countdown Timer</h3>
+            <p>Set a simple countdown in minutes and seconds.</p>
+
+            <input type="number" id="timerMinutes" placeholder="Minutes" min="0">
+            <input type="number" id="timerSeconds" placeholder="Seconds" min="0" max="59">
+
+            <button class="tool-btn" onclick="startTimer()">Start Countdown</button>
+            <button class="tool-btn" onclick="stopTimer()">Stop</button>
+
+            <div class="result" id="timerResult">00:00</div>
+        </div>
+
+        <!-- 6 WEATHER -->
+        <div class="tool-card" data-name="weather">
+            <div class="tool-icon">🌤️</div>
+            <h3>Weather Tool</h3>
+            <p>Open a weather search for any city.</p>
+
+            <input id="weatherCity" placeholder="Example: Karachi">
+
+            <button class="tool-btn" onclick="openWeather()">
+                Check Weather
+            </button>
+
+            <div class="result">
+                Opens a weather search in a new tab.
+            </div>
+        </div>
+
+        <!-- 7 PERCENTAGE -->
+        <div class="tool-card" data-name="percentage calculator">
+            <div class="tool-icon">％</div>
+            <h3>Percentage Calculator</h3>
+            <p>Calculate a percentage of a number.</p>
+
+            <input type="number" id="percentNumber" placeholder="Number">
+            <input type="number" id="percentValue" placeholder="Percentage">
+
+            <button class="tool-btn" onclick="percentage()">Calculate</button>
+
+            <div class="result" id="percentResult"></div>
+        </div>
+
+        <!-- 8 UNIT -->
+        <div class="tool-card" data-name="unit converter length weight">
+            <div class="tool-icon">📏</div>
+            <h3>Unit Converter</h3>
+            <p>Convert common length and weight units.</p>
+
+            <input type="number" id="unitAmount" placeholder="Amount">
+
+            <select id="unitFrom">
+                <option value="m">Meters</option>
+                <option value="km">Kilometers</option>
+                <option value="cm">Centimeters</option>
+                <option value="ft">Feet</option>
+                <option value="kg">Kilograms</option>
+                <option value="lb">Pounds</option>
+            </select>
+
+            <select id="unitTo">
+                <option value="km">Kilometers</option>
+                <option value="m">Meters</option>
+                <option value="cm">Centimeters</option>
+                <option value="ft">Feet</option>
+                <option value="lb">Pounds</option>
+                <option value="kg">Kilograms</option>
+            </select>
+
+            <button class="tool-btn" onclick="convertUnit()">Convert</button>
+
+            <div class="result" id="unitResult"></div>
+        </div>
+
+        <!-- 9 WORD COUNTER -->
+        <div class="tool-card" data-name="word character counter">
+            <div class="tool-icon">📝</div>
+            <h3>Word Counter</h3>
+            <p>Count words and characters instantly.</p>
+
+            <textarea
+                id="wordText"
+                placeholder="Type or paste your text..."
+                oninput="countWords()"
+            ></textarea>
+
+            <div class="result" id="wordResult">
+                Words: 0 | Characters: 0
+            </div>
+        </div>
+
+        <!-- 10 PASSWORD -->
+        <div class="tool-card" data-name="password generator">
+            <div class="tool-icon">🔐</div>
+            <h3>Password Generator</h3>
+            <p>Create a random strong password for your accounts.</p>
+
+            <input
+                type="number"
+                id="passwordLength"
+                value="16"
+                min="6"
+                max="50"
+            >
+
+            <button class="tool-btn" onclick="generatePassword()">
+                Generate
+            </button>
+
+            <button class="tool-btn" onclick="copyText('passwordResult')">
+                Copy Password
+            </button>
+
+            <div class="result" id="passwordResult"></div>
+        </div>
+
+        <!-- 11 QR -->
+        <div class="tool-card" data-name="qr code generator">
+            <div class="tool-icon">▦</div>
+            <h3>QR Code Generator</h3>
+            <p>Create a QR code from text or a website link.</p>
+
+            <input id="qrText" placeholder="Enter text or URL">
+
+            <button class="tool-btn" onclick="generateQR()">
+                Generate QR
+            </button>
+
+            <div class="result" id="qrResult" style="text-align:center;"></div>
+        </div>
+
+        <!-- 12 COLOR -->
+        <div class="tool-card" data-name="color picker">
+            <div class="tool-icon">🎨</div>
+            <h3>Color Picker</h3>
+            <p>Choose a color and copy its HEX value.</p>
+
+            <input
+                type="color"
+                id="colorPicker"
+                value="#00eaff"
+                style="height:60px;padding:4px;"
+                oninput="showColor()"
+            >
+
+            <div class="result" id="colorResult">#00EAFF</div>
+
+            <button class="tool-btn" onclick="copyText('colorResult')">
+                Copy HEX
+            </button>
+        </div>
+
+        <!-- 13 BMI -->
+        <div class="tool-card" data-name="bmi calculator">
+            <div class="tool-icon">⚖️</div>
+            <h3>BMI Calculator</h3>
+            <p>Calculate BMI using height and weight.</p>
+
+            <input type="number" id="bmiWeight" placeholder="Weight (kg)">
+            <input type="number" id="bmiHeight" placeholder="Height (cm)">
+
+            <button class="tool-btn" onclick="calculateBMI()">
+                Calculate BMI
+            </button>
+
+            <div class="result" id="bmiResult"></div>
+        </div>
+
+        <!-- 14 TIP -->
+        <div class="tool-card" data-name="tip calculator">
+            <div class="tool-icon">💰</div>
+            <h3>Tip Calculator</h3>
+            <p>Calculate tip and total bill quickly.</p>
+
+            <input type="number" id="billAmount" placeholder="Bill amount">
+            <input type="number" id="tipPercent" placeholder="Tip %" value="10">
+
+            <button class="tool-btn" onclick="calculateTip()">
+                Calculate
+            </button>
+
+            <div class="result" id="tipResult"></div>
+        </div>
+
+        <!-- 15 NOTES -->
+        <div class="tool-card" data-name="notes quick notes notepad">
+            <div class="tool-icon">📋</div>
+            <h3>Quick Notes</h3>
+            <p>Write notes and keep them in your browser.</p>
+
+            <textarea
+                id="notes"
+                placeholder="Write your notes..."
+            ></textarea>
+
+            <div class="note-actions">
+                <button class="tool-btn" onclick="saveNotes()">Save</button>
+                <button class="tool-btn" onclick="clearNotes()">Clear</button>
+            </div>
+
+            <div class="result" id="notesResult"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="tools-section" id="about">
+    <div class="section-title">
+        <h2>About NooriTools</h2>
+        <p>
+            NooriTools is designed as a simple all-in-one toolbox
+            for everyday digital tasks.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">
+        <span style="color:#00eaff;">N</span> NooriTools
+    </div>
+
+    <p>
+        Smart tools. Simple experience. One powerful website.
+    </p>
+
+    <p class="footer-small">
+        © 2026 NooriTools. All rights reserved.
+    </p>
+</footer>
+
+<script>
+
+/* NAVIGATION */
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* SEARCH */
+function searchTools(){
+    const query =
+        document.getElementById("toolSearch").value.toLowerCase();
+
+    document.querySelectorAll(".tool-card").forEach(card=>{
+        const name = card.dataset.name.toLowerCase();
+
+        card.style.display =
+            name.includes(query) ? "block" : "none";
+    });
+}
+
+/* CALCULATOR */
+function calculate(){
+    const input =
+        document.getElementById("calcInput").value.trim();
+
+    const output =
+        document.getElementById("calcResult");
+
+    if(!input){
+        output.textContent = "Enter a calculation.";
+        return;
+    }
+
+    try{
+        if(!/^[0-9+\-*/().%\s]+$/.test(input)){
+            throw new Error();
+        }
+
+        const result = Function(
+            '"use strict"; return (' + input + ')'
+        )();
+
+        output.textContent = "Result: " + result;
+    }catch{
+        output.textContent = "Invalid calculation.";
+    }
+}
+
+/* CURRENCY */
+/* Approximate reference: 1 AFN = 4.25 PKR */
+const AFN_TO_PKR = 4.25;
+
+function convertCurrency(){
+
+    const from =
+        document.getElementById("currencyFrom").value;
+
+    const to =
+        document.getElementById("currencyTo").value;
+
+    const amount =
+        parseFloat(document.getElementById("currencyAmount").value);
+
+    const result =
+        document.getElementById("currencyResult");
+
+    if(isNaN(amount)){
+        result.textContent = "Enter an amount.";
+        return;
+    }
+
+    let converted;
+
+    if(from === to){
+        converted = amount;
+    }
+    else if(from === "AFN" && to === "PKR"){
+        converted = amount * AFN_TO_PKR;
+    }
+    else{
+        converted = amount / AFN_TO_PKR;
+    }
+
+    result.textContent =
+        amount.toLocaleString() +
+        " " + from +
+        " = " +
+        converted.toLocaleString(undefined,{
+            maximumFractionDigits:4
+        }) +
+        " " + to;
+}
+
+/* AGE */
+function calculateAge(){
+
+    const birth =
+        document.getElementById("birthDate").value;
+
+    const result =
+        document.getElementById("ageResult");
+
+    if(!birth){
+        result.textContent = "Select your birth date.";
+        return;
+    }
+
+    const birthDate = new Date(birth);
+    const today = new Date();
+
+    let age =
+        today.getFullYear() -
+        birthDate.getFullYear();
+
+    const month =
+        today.getMonth() -
+        birthDate.getMonth();
+
+    if(
+        month < 0 ||
+        (month === 0 &&
+        today.getDate() < birthDate.getDate())
+    ){
+        age--;
+    }
+
+    result.textContent =
+        "Your age is approximately " + age + " years.";
+}
+
+/* DATE DIFFERENCE */
+function dateDifference(){
+
+    const one =
+        new Date(document.getElementById("dateOne").value);
+
+    const two =
+        new Date(document.getElementById("dateTwo").value);
+
+    const result =
+        document.getElementById("dateResult");
+
+    if(isNaN(one) || isNaN(two)){
+        result.textContent = "Select both dates.";
+        return;
+    }
+
+    const days =
+        Math.round(
+            Math.abs(two - one) /
+            (1000 * 60 * 60 * 24)
+        );
+
+    result.textContent =
+        days + " day(s) between the selected dates.";
+}
+
+/* COUNTDOWN */
+let timerInterval = null;
+let timerSecondsLeft = 0;
+
+function startTimer(){
+
+    clearInterval(timerInterval);
+
+    const minutes =
+        parseInt(document.getElementById("timerMinutes").value) || 0;
+
+    const seconds =
+        parseInt(document.getElementById("timerSeconds").value) || 0;
+
+    timerSecondsLeft =
+        minutes * 60 + seconds;
+
+    if(timerSecondsLeft <= 0){
+        document.getElementById("timerResult").textContent =
+            "Enter a time greater than 0.";
+        return;
+    }
+
+    updateTimerDisplay();
+
+    timerInterval = setInterval(()=>{
+
+        timerSecondsLeft--;
+
+        updateTimerDisplay();
+
+        if(timerSecondsLeft <= 0){
+            clearInterval(timerInterval);
+            document.getElementById("timerResult").textContent =
+                "⏰ Time's up!";
+        }
+
+    },1000);
+}
+
+function stopTimer(){
+    clearInterval(timerInterval);
+}
+
+function updateTimerDisplay(){
+
+    const mins =
+        Math.floor(timerSecondsLeft / 60);
+
+    const secs =
+        timerSecondsLeft % 60;
+
+    document.getElementById("timerResult").textContent =
+        String(mins).padStart(2,"0") +
+        ":" +
+        String(secs).padStart(2,"0");
+}
+
+/* WEATHER */
+function openWeather(){
+
+    const city =
+        document.getElementById("weatherCity").value.trim();
+
+    if(!city){
+        alert("Enter a city first.");
+        return;
+    }
+
+    window.open(
+        "https://www.google.com/search?q=weather+" +
+        encodeURIComponent(city),
+        "_blank"
+    );
+}
+
+/* PERCENTAGE */
+function percentage(){
+
+    const number =
+        parseFloat(document.getElementById("percentNumber").value);
+
+    const percent =
+        parseFloat(document.getElementById("percentValue").value);
+
+    const result =
+        document.getElementById("percentResult");
+
+    if(isNaN(number) || isNaN(percent)){
+        result.textContent = "Enter both values.";
+        return;
+    }
+
+    result.textContent =
+        percent + "% of " +
+        number + " = " +
+        (number * percent / 100);
+}
+
+/* UNIT CONVERTER */
+function convertUnit(){
+
+    const amount =
+        parseFloat(document.getElementById("unitAmount").value);
+
+    const from =
+        document.getElementById("unitFrom").value;
+
+    const to =
+        document.getElementById("unitTo").value;
+
+    const result =
+        document.getElementById("unitResult");
+
+    if(isNaN(amount)){
+        result.textContent = "Enter an amount.";
+        return;
+    }
+
+    const lengthUnits = ["m","km","cm","ft"];
+    const weightUnits = ["kg","lb"];
+
+    if(
+        (lengthUnits.includes(from) &&
+        weightUnits.includes(to)) ||
+        (weightUnits.includes(from) &&
+        lengthUnits.includes(to))
+    ){
+        result.textContent =
+            "Choose units from the same category.";
+        return;
+    }
+
+    let value;
+
+    if(lengthUnits.includes(from)){
+
+        const toMeters = {
+            m:1,
+            km:1000,
+            cm:.01,
+            ft:.3048
+        };
+
+        value =
+            amount *
+            toMeters[from] /
+            toMeters[to];
+
+    }else{
+
+        const toKg = {
+            kg:1,
+            lb:.45359237
+        };
+
+        value =
+            amount *
+            toKg[from] /
+            toKg[to];
+    }
+
+    result.textContent =
+        amount + " " + from +
+        " = " +
+        value.toLocaleString(undefined,{
+            maximumFractionDigits:6
+        }) +
+        " " + to;
+}
+
+/* WORD COUNTER */
+function countWords(){
+
+    const text =
+        document.getElementById("wordText").value;
+
+    const trimmed =
+        text.trim();
+
+    const words =
+        trimmed ? trimmed.split(/\s+/).length : 0;
+
+    const characters =
+        text.length;
+
+    document.getElementById("wordResult").textContent =
+        "Words: " +
+        words +
+        " | Characters: " +
+        characters;
+}
+
+/* PASSWORD */
+function generatePassword(){
+
+    const length =
+        parseInt(document.getElementById("passwordLength").value) || 16;
+
+    const chars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+        "abcdefghijklmnopqrstuvwxyz" +
+        "0123456789" +
+        "!@#$%^&*()_+-=[]{}";
+
+    let password = "";
+
+    for(let i=0;i<length;i++){
+        password += chars[
+            Math.floor(Math.random()*chars.length)
+        ];
+    }
+
+    document.getElementById("passwordResult").textContent =
+        password;
+}
+
+/* COPY */
+async function copyText(id){
+
+    const element =
+        document.getElementById(id);
+
+    const text =
+        element.textContent.trim();
+
+    if(!text){
+        return;
+    }
+
+    try{
+        await navigator.clipboard.writeText(text);
+        alert("Copied!");
+    }catch{
+        alert("Copy failed. Please copy it manually.");
+    }
+}
+
+/* QR CODE */
+function generateQR(){
+
+    const text =
+        document.getElementById("qrText").value.trim();
+
+    const result =
+        document.getElementById("qrResult");
+
+    if(!text){
+        result.innerHTML = "Enter text or a URL.";
+        return;
+    }
+
+    const url =
+        "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+        encodeURIComponent(text);
+
+    result.innerHTML =
+        '<img src="' +
+        url +
+        '" alt="QR Code" style="width:180px;height:180px;border-radius:10px;">';
+}
+
+/* COLOR */
+function showColor(){
+
+    const color =
+        document.getElementById("colorPicker").value.toUpperCase();
+
+    document.getElementById("colorResult").textContent =
+        color;
+}
+
+/* BMI */
+function calculateBMI(){
+
+    const weight =
+        parseFloat(document.getElementById("bmiWeight").value);
+
+    const height =
+        parseFloat(document.getElementById("bmiHeight").value);
+
+    const result =
+        document.getElementById("bmiResult");
+
+    if(
+        isNaN(weight) ||
+        isNaN(height) ||
+        weight <= 0 ||
+        height <= 0
+    ){
+        result.textContent = "Enter valid height and weight.";
+        return;
+    }
+
+    const meters = height / 100;
+
+    const bmi =
+        weight / (meters * meters);
+
+    result.textContent =
+        "BMI: " + bmi.toFixed(1);
+}
+
+/* TIP */
+function calculateTip(){
+
+    const bill =
+        parseFloat(document.getElementById("billAmount").value);
+
+    const tipPercent =
+        parseFloat(document.getElementById("tipPercent").value);
+
+    const result =
+        document.getElementById("tipResult");
+
+    if(isNaN(bill) || isNaN(tipPercent)){
+        result.textContent = "Enter both values.";
+        return;
+    }
+
+    const tip =
+        bill * tipPercent / 100;
+
+    const total =
+        bill + tip;
+
+    result.innerHTML =
+        "Tip: " + tip.toFixed(2) +
+        "<br>Total: " + total.toFixed(2);
+}
+
+/* NOTES */
+function saveNotes(){
+
+    const notes =
+        document.getElementById("notes").value;
+
+    localStorage.setItem("nooriNotes",notes);
+
+    document.getElementById("notesResult").textContent =
+        "✓ Notes saved in this browser.";
+}
+
+function clearNotes(){
+
+    document.getElementById("notes").value = "";
+
+    localStorage.removeItem("nooriNotes");
+
+    document.getElementById("notesResult").textContent =
+        "Notes cleared.";
+}
+
+/* LOAD NOTES */
+window.addEventListener("load",()=>{
+
+    const saved =
+        localStorage.getItem("nooriNotes");
+
+    if(saved){
+        document.getElementById("notes").value = saved;
+    }
+
+    showColor();
+
+});
+</script>
+
+</body>
+</html>
+```
