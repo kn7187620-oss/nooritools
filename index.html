@@ -447,6 +447,117 @@ footer p{
         font-size:32px;
     }
 }
+
+/* ==================== GUIDES SECTION ==================== */
+.guides-section{
+    max-width:1250px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.guides-section .section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.guides-section .section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+    background:linear-gradient(90deg,#00eaff,#b66cff,#ff3dd8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.guides-section .section-title p{
+    color:#94a3b8;
+}
+
+.guides-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.guide-card{
+    background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    padding:25px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.guide-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(90deg,#00eaff,#7c6cff,#ff29d9);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+}
+
+.guide-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(0,234,255,.35);
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.guide-card:hover::before{
+    transform:scaleX(1);
+}
+
+.guide-icon{
+    font-size:35px;
+    margin-bottom:13px;
+}
+
+.guide-card h3{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.guide-card p{
+    color:#91a3b8;
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:16px;
+}
+
+.guide-example{
+    padding:11px 13px;
+    border-radius:10px;
+    background:rgba(0,234,255,.06);
+    border:1px solid rgba(0,234,255,.10);
+    color:#dffcff;
+    font-size:13px;
+    line-height:1.5;
+}
+
+@media(max-width:950px){
+    .guides-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .guides-grid{
+        grid-template-columns:1fr;
+    }
+
+    .guides-section{
+        padding:55px 20px;
+    }
+
+    .guides-section .section-title h2{
+        font-size:32px;
+    }
+}
+
 </style>
 </head>
 
@@ -465,6 +576,7 @@ footer p{
         <li><a href="#home">Home</a></li>
         <li><a href="#tools">Tools</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#guides">Guides</a></li>
     </ul>
 
 </nav>
@@ -800,6 +912,104 @@ footer p{
         <p style="color:#a9b8cc;line-height:1.8;margin-top:15px;">Use the tools for everyday tasks and always verify important results before relying on them for important decisions.</p>
     </div>
 
+</section>
+
+
+<!-- ==================== GUIDES ==================== -->
+<section class="guides-section" id="guides">
+
+    <div class="section-title">
+        <h2>Helpful Guides</h2>
+        <p>Simple explanations to help you use NooriTools effectively.</p>
+    </div>
+
+    <div class="guides-grid">
+
+        <article class="guide-card">
+            <div class="guide-icon">🧮</div>
+            <h3>How to Calculate Percentages</h3>
+            <p>Use the Percentage Calculator to find a percentage of any number for everyday calculations.</p>
+            <div class="guide-example"><strong>Example:</strong> 20% of 500 = 100.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">🎂</div>
+            <h3>How to Calculate Age</h3>
+            <p>Enter a birth date and use the Age Calculator to find your approximate age in years.</p>
+            <div class="guide-example"><strong>Tip:</strong> Enter the correct date of birth.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">💱</div>
+            <h3>How to Convert PKR and AFN</h3>
+            <p>Select your starting currency, choose the target currency, enter an amount, and press Convert.</p>
+            <div class="guide-example"><strong>Current site reference:</strong> 1 AFN ≈ 4.25 PKR.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">📅</div>
+            <h3>How to Find Date Differences</h3>
+            <p>Select two dates and use Date Difference to calculate the number of days between them.</p>
+            <div class="guide-example"><strong>Useful for:</strong> planning, deadlines, and events.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">📏</div>
+            <h3>How to Convert Units</h3>
+            <p>Enter a value, select the units from the same category, and press Convert.</p>
+            <div class="guide-example"><strong>Example:</strong> 1 kilometer = 1,000 meters.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">💰</div>
+            <h3>How to Calculate a Tip</h3>
+            <p>Enter your bill amount and tip percentage to calculate the tip and the total bill.</p>
+            <div class="guide-example"><strong>Example:</strong> 10% of 1,000 = 100 tip.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">📱</div>
+            <h3>How to Create a QR Code</h3>
+            <p>Enter text or a website link and press Generate QR to create a scannable QR code.</p>
+            <div class="guide-example"><strong>Tip:</strong> Test the QR code before sharing it.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">🔐</div>
+            <h3>How to Generate a Password</h3>
+            <p>Choose a password length and use the Password Generator to create a random password.</p>
+            <div class="guide-example"><strong>Tip:</strong> Use unique passwords for important accounts.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">📊</div>
+            <h3>How to Use the BMI Calculator</h3>
+            <p>Enter height and weight to calculate BMI. BMI is a general screening measure and not a complete health assessment.</p>
+            <div class="guide-example"><strong>Tip:</strong> Use accurate measurements for the calculation.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">⏳</div>
+            <h3>How to Use the Countdown Timer</h3>
+            <p>Enter minutes and seconds, then press Start Countdown to begin a simple timer.</p>
+            <div class="guide-example"><strong>Useful for:</strong> study sessions, tasks, and reminders.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">🎨</div>
+            <h3>How to Use the Color Picker</h3>
+            <p>Select a color with the Color Picker and copy the displayed HEX value for your projects.</p>
+            <div class="guide-example"><strong>Example:</strong> #00EAFF is a HEX color value.</div>
+        </article>
+
+        <article class="guide-card">
+            <div class="guide-icon">📝</div>
+            <h3>How to Count Words</h3>
+            <p>Type or paste text into the Word Counter to instantly see the number of words and characters.</p>
+            <div class="guide-example"><strong>Useful for:</strong> assignments, posts, and short documents.</div>
+        </article>
+
+    </div>
 </section>
 
 <footer>
